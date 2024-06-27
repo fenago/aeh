@@ -46,3 +46,22 @@
    - Select the user and click "Save" to assign the role.
 
 By following these steps, you will have successfully created a resource group in Azure and a user with full administrative capabilities over Azure Event Hub. Make sure to adjust permissions according to your security policies and organizational requirements.
+
+## ALTERNATIVE
+Here are the step-by-step instructions to add a user to a resource group and assign full administrative privileges over any Azure Event Hub (AEH) that will be created and managed within this resource group:
+
+1. **Add User to the Resource Group**:
+   - Sign in to the Azure Portal at [https://portal.azure.com](https://portal.azure.com).
+   - Navigate to "Resource groups" and select the resource group "GroupX-RG".
+   - Click on "Access control (IAM)".
+   - Click on "+ Add" and select "Add role assignment".
+   - Choose the role "Contributor" to give administrative access over resources within the group Under Privileged administrator roles tab.  (you can also choose Owner).  
+   - Click on Members and search for the user by name or email address after clicking +Select members.
+   - Select the user from the search results and click "Save" to grant them access to the resource group.
+
+2. **Assign Full Admin Capabilities Over Azure Event Hub**:
+   - Within the same "GroupX-RG" resource group, ensure that any Azure Event Hub created inherits permissions from this group.
+   - Verify that the "Contributor" role is sufficient for full administrative capabilities over the Azure Event Hub. If not, consider using the "Owner" role for broader access.
+   - If creating a new Event Hub, navigate to the Azure Event Hub service within the resource group and confirm that the inherited permissions apply.
+
+These steps will ensure that the specified user has full administrative capabilities over any Azure Event Hub created within "Group73-RG". This setup facilitates management and oversight of resources effectively.
